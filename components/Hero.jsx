@@ -83,7 +83,7 @@ export default function Hero() {
               View Projects
             </button>
             <a
-              href="/LethabolAnyanwu_CV_2026.pdf"
+              href="/portfolio-site/LethabolAnyanwu_CV_2026.pdf"
               download
               className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 text-gray-300 font-medium text-sm hover:border-cyan-500/50 hover:text-cyan-400 transition-all duration-300"
             >
