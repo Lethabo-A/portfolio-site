@@ -1,8 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { education, certifications } from "@/data/portfolio";
 import { ExternalLink } from "lucide-react";
+
+const BASE = "/portfolio-site";
 
 export default function Education() {
   return (
@@ -68,11 +69,10 @@ export default function Education() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-6 rounded-2xl overflow-hidden border border-white/5 relative h-48"
             >
-              <Image
-                src="/images/graduation.png"
+              <img
+                src={`${BASE}/images/graduation.png`}
                 alt="Graduation"
-                fill
-                className="object-cover object-top"
+                className="object-cover object-top w-full h-full absolute inset-0"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d14]/80 to-transparent" />
               <div className="absolute bottom-4 left-4">

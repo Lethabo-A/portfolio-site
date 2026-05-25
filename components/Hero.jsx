@@ -1,10 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { personal } from "@/data/portfolio";
 import { Download, ArrowDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/SocialIcons";
+
+const BASE = "/portfolio-site";
 
 const roles = ["AI & Automation Developer", "UiPath RPA Developer", "Power Platform Builder", "Process Automation Engineer"];
 
@@ -83,7 +84,7 @@ export default function Hero() {
               View Projects
             </button>
             <a
-              href="/portfolio-site/LethabolAnyanwu_CV_2026.pdf"
+              href={`${BASE}/LethabolAnyanwu_CV_2026.pdf`}
               download
               className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 text-gray-300 font-medium text-sm hover:border-cyan-500/50 hover:text-cyan-400 transition-all duration-300"
             >
@@ -133,12 +134,10 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-500/30 to-blue-600/30 blur-2xl scale-110" />
             <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-cyan-500/20 ring-4 ring-cyan-500/5">
-              <Image
-                src="/images/hero.png"
+              <img
+                src={`${BASE}/images/hero.png`}
                 alt="Lethabo Anyanwu"
-                fill
-                className="object-cover object-top"
-                priority
+                className="object-cover object-top w-full h-full"
               />
             </div>
             {/* Floating badge */}

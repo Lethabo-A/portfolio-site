@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { personal, achievements } from "@/data/portfolio";
+
+const BASE = "/portfolio-site";
 
 export default function About() {
   return (
@@ -20,11 +21,9 @@ export default function About() {
           <div className="relative w-full max-w-sm mx-auto">
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-violet-600/20 rounded-2xl blur-xl" />
             <div className="relative rounded-2xl overflow-hidden border border-white/5">
-              <Image
-                src="/images/about.png"
+              <img
+                src={`${BASE}/images/about.png`}
                 alt="Lethabo Anyanwu"
-                width={400}
-                height={500}
                 className="object-cover w-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d14]/80 to-transparent" />
